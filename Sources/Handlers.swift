@@ -41,7 +41,7 @@ class Handlers {
 				let email = incoming?["email"] as! String
 				if email.isValidEmail() {
 					// ping slack...
-					let returned = slackAPI.inviteToSlack(name: slackName, token: apiToken, email: email)
+                    let returned = slackAPI.inviteToSlack(name: slackName, token: apiToken, email: email, channel: slackChannel)
 					if returned["ok"] as! Bool {
 						try response.setBody(json: ["msg": "Success!"])
 					} else {

@@ -20,9 +20,9 @@ class SlackAPI {
 	init(){}
 
 	/// INVITE user to slack
-	func inviteToSlack(name: String, token: String, email: String) -> [String:Any] {
+    func inviteToSlack(name: String, token: String, email: String, channel: String) -> [String:Any] {
 		let now = Date()
-		let url = "https://\(name).slack.com/api/users.admin.invite?t=\(Int(now.timeIntervalSince1970))&token=\(token)&email=\(email)"
+		let url = "https://\(name).slack.com/api/users.admin.invite?t=\(Int(now.timeIntervalSince1970))&token=\(token)&email=\(email)&ultra_restricted=true&channels=\(channel)"
 		let (_, data, _, _) = makeRequest(.get, url)
 		return data
 	}

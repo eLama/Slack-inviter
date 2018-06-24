@@ -24,14 +24,14 @@ import PerfectRequestLogger
 
 // Settings path vars.
 #if os(Linux)
-	let	FileRoot = "/perfect-deployed/swiftslack/"
-	let port = 8103
+	let	FileRoot = "/perfect-deployed/slack-inviter/"
+	let port = 80
 #else
 	let FileRoot = ""
 	let port = 8181
 #endif
 
-let (apiToken, slackName) = getSettings()
+let (apiToken, slackName, slackChannel) = getSettings()
 
 let slackObj = SlackAPI()
 // get team info / logo

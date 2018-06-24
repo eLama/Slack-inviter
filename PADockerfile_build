@@ -1,8 +1,37 @@
-FROM perfectlysoft/perfectassistant:latest
-# COpenSSL-2.0.2/PADockerfile
+FROM perfectlysoft/perfectassistant:4.1
+# Perfect-libcurl.git-4671194003321010368/PADockerfile
+RUN apt-get -y update && apt-get install -y libcurl4-openssl-dev
+
+# Perfect-COpenSSL-Linux.git--2129632020753039854/PADockerfile
 RUN apt-get -y update && apt-get install -y libssl-dev
 
-# cURL-2.0.1/PADockerfile
-RUN apt-get -y update && apt-get install -y libcurl4-openssl-dev
-# LinuxBridge-2.0.2/PADockerfile
+# Perfect-LinuxBridge.git-7093948580310319564/PADockerfile
 RUN apt-get -y update && apt-get install -y uuid-dev
+
+# Perfect-COpenSSL-Linux.git-9076678638232678358/PADockerfile
+RUN apt-get -y update && apt-get install -y libssl-dev
+
+# Perfect-LinuxBridge.git-4207885206044672488/PADockerfile
+RUN apt-get -y update && apt-get install -y uuid-dev
+
+# Perfect-COpenSSL-Linux.git--3423164889620030061/PADockerfile
+RUN apt-get -y update && apt-get install -y libssl-dev
+
+# Perfect-libcurl.git-9031453224126263635/PADockerfile
+RUN apt-get -y update && apt-get install -y libcurl4-openssl-dev
+
+# Perfect-libcurl.git-3943552470021998363/PADockerfile
+RUN apt-get -y update && apt-get install -y libcurl4-openssl-dev
+
+# Perfect-LinuxBridge.git-4676950990165469098/PADockerfile
+RUN apt-get -y update && apt-get install -y uuid-dev
+
+# Perfect-libcurl.git-3414875607493348855/PADockerfile
+RUN apt-get -y update && apt-get install -y libcurl4-openssl-dev
+
+# Perfect-LinuxBridge.git-7174688864315752557/PADockerfile
+RUN apt-get -y update && apt-get install -y uuid-dev
+
+# Perfect-COpenSSL-Linux.git--5919637632145005647/PADockerfile
+RUN apt-get -y update && apt-get install -y libssl-dev
+RUN rm -rf /var/lib/apt/lists/*
